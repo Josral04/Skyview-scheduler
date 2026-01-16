@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 @Table(name = "staff")
 public class Staff {
 
+    private String firstName;
+    private String lastName;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -78,4 +80,13 @@ public class Staff {
     public void setCanCoachGame(boolean canCoachGame) {
         this.canCoachGame = canCoachGame;
     }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
 }
